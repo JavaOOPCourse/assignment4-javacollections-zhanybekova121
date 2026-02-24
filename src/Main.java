@@ -28,22 +28,33 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    // TODO
+                    // Show students
+                    studentService.printStudents();
                     break;
                 case 2:
-                    // TODO
+                    // Show appointments
+                    appointmentService.printAppointments();
                     break;
                 case 3:
-                    // TODO
+                    // Show Emergency Issues
+                    issueService.showEmergencyIssues();
                     break;
                 case 4:
-                    // TODO
+                    // Show Action History
+                    actionService.printHistory();
                     break;
                 case 5:
-                    // TODO
+                    // Add new issue
+                    System.out.print("Enter issue description: ");
+                    scanner.nextLine(); // Consume newline
+                    String description = scanner.nextLine();
+                    System.out.print("Enter urgency (1-5): ");
+                    int urgency = scanner.nextInt();    
+                    issueService.addNewIssue(description, urgency);
                     break;
                 case 6:
-                    // TODO
+                    // Undo last action
+                    actionService.undoLastAction();
                     break;
                 case 7:
                     System.out.println("Exiting... 👋");

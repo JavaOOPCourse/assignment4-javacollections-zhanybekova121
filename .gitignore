@@ -1,0 +1,6 @@
+src/model/oraclejdk-25/
+.idea/
+*.iml
+out/
+gen/
+
